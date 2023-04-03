@@ -1,5 +1,6 @@
-package com.franklin.samples.kafka;
+package com.alexshabetia.samples.kafka;
 
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.annotation.KafkaListener;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Service;
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
+@Slf4j
 @Service
 public class Consumer {
 
@@ -21,7 +23,7 @@ public class Consumer {
         latch.countDown();
         payload = Models.User.parseFrom(message);
 
-        logger.info("Consumed message [{}]", payload);
+        log.info("Consumed message [{}]", payload);
     }
 
     public CountDownLatch getLatch() {
