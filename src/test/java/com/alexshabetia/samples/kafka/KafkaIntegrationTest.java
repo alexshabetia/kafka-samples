@@ -1,4 +1,4 @@
-package com.franklin.samples.kafka;
+package com.alexshabetia.samples.kafka;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
