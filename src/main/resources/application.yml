@@ -3,14 +3,14 @@ server:
 
 spring:
     kafka:
-#        consumer:
-#            bootstrap-servers: localhost:9092
-#            auto-offset-reset: earliest
-#            group_id: group-id
-##            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-##            value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
-#            key-deserializer: io.confluent.kafka.serializers.KafkaAvroSerializer
-#            value-deserializer: io.confluent.kafka.serializers.KafkaAvroSerializer
+        consumer:
+            bootstrap-servers: localhost:9092
+            auto-offset-reset: earliest
+            group_id: group-id
+#            key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+#            value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
+            key-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
+            value-deserializer: io.confluent.kafka.serializers.KafkaAvroDeserializer
         producer:
             bootstrap-servers: localhost:9092
 #            key-serializer: org.apache.kafka.common.serialization.StringSerializer
@@ -19,6 +19,7 @@ spring:
             value-serializer: io.confluent.kafka.serializers.KafkaAvroSerializer
         properties:
             schema.registry.url: http://localhost:8081
+            specific.avro.reader: true
 
 app:
     topic: user
