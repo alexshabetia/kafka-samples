@@ -15,7 +15,7 @@ public class SendAvroMessageController {
     private final AvroProducer producer;
 
     @GetMapping("/send1")
-    public ResponseEntity<Void> getLocationByUuid() {
+    public ResponseEntity<User> getLocationByUuid() {
         var userMessage = User.newBuilder()
                 .setName("Jonh")
                 .setAge(33)
@@ -24,6 +24,6 @@ public class SendAvroMessageController {
 
         producer.send(topic, userMessage);
 
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok(userMessage);
     }
 }

@@ -53,6 +53,8 @@ dependencies {
     implementation 'org.springframework.cloud:spring-cloud-stream-binder-kafka'
     implementation 'org.springframework.cloud:spring-cloud-stream-schema:2.2.1.RELEASE'
 
+    implementation 'com.vladkrava:avro-converter:1.0.1'
+
 //    implementation 'org.apache.kafka:kafka-clients:3.4.0'
 //    implementation 'org.apache.kafka:kafka-streams:3.4.0'
     compileOnly 'org.projectlombok:lombok'
