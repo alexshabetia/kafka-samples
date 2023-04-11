@@ -17,10 +17,10 @@ import static org.hamcrest.MatcherAssert.assertThat;
 @EmbeddedKafka(partitions = 1, brokerProperties = {"listeners=PLAINTEXT://${spring.kafka.consumer.bootstrap-servers}"})
 class KafkaIntegrationTest {
     @Autowired
-    private AvroConsumer consumer;
+    private Consumer consumer;
 
     @Autowired
-    private AvroProducer producer;
+    private Producer producer;
 
     @Value("${app.topic}")
     private String topic;

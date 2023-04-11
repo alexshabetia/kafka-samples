@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service;
 
 @Slf4j
 @Service
-public class AvroProducer {
+public class Producer {
 
     @Autowired
     private KafkaTemplate<String, User> kafkaTemplate;
@@ -17,5 +17,4 @@ public class AvroProducer {
 
         kafkaTemplate.send(topic, message);
     }
-
 }

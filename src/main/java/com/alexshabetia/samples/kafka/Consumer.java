@@ -8,7 +8,7 @@ import java.util.concurrent.CountDownLatch;
 
 @Slf4j
 @Service
-public class AvroConsumer {
+public class Consumer {
 
     private CountDownLatch latch = new CountDownLatch(1);
     private User payload = null;
