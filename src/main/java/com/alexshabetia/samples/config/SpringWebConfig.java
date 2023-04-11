@@ -13,13 +13,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import java.util.List;
 
-
-/**
- * Spring configuration class for configuring {@link WebMvcConfigurer}
- *
- * @author vkrava4
- * @since 0.0.1-SNAPSHOT
- */
 @Configuration
 @EnableWebMvc
 public class SpringWebConfig implements WebMvcConfigurer {

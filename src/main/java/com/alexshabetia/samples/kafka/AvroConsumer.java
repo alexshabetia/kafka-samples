@@ -1,12 +1,9 @@
-package com.alexshabetia.samples.avro;
+package com.alexshabetia.samples.kafka;
 
-import com.alexshabetia.samples.kafka.Models;
-import com.alexshabetia.samples.kafka.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
-import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
 
 @Slf4j
@@ -17,9 +14,9 @@ public class AvroConsumer {
     private User payload = null;
 
     @KafkaListener(topics = "${app.topic}")
-    public void consume(User message) throws IOException {
+    public void consume(User message) {
         latch.countDown();
-
+        payload = message;
         log.info("Consumed message [{}]", message);
     }
 

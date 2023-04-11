@@ -1,5 +1,6 @@
-package com.alexshabetia.samples.avro;
+package com.alexshabetia.samples.controller;
 
+import com.alexshabetia.samples.kafka.AvroProducer;
 import com.alexshabetia.samples.kafka.User;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +15,7 @@ public class SendAvroMessageController {
     @Autowired
     private final AvroProducer producer;
 
-    @GetMapping("/send1")
+    @GetMapping("/send")
     public ResponseEntity<User> getLocationByUuid() {
         var userMessage = User.newBuilder()
                 .setName("Jonh")

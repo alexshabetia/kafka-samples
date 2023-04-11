@@ -1,6 +1,5 @@
-package com.alexshabetia.samples.avro;
+package com.alexshabetia.samples.kafka;
 
-import com.alexshabetia.samples.kafka.User;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.core.KafkaTemplate;
