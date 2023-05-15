@@ -1,1 +1,1 @@
-# java-samples
+# Kafka and Protobuf withoud Schema Registry
